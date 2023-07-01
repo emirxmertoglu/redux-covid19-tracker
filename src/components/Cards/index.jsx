@@ -1,15 +1,17 @@
 import { useSelector } from "react-redux";
 import moment from "moment";
+import Error from "@/components/Error";
+import Loading from "@/components/Loading";
 
 const Cards = () => {
   const { data, status, error } = useSelector((state) => state.covid);
 
   if (status === "loading") {
-    return <div>Loading...</div>;
+    return <Loading />;
   }
 
   if (status === "failed") {
-    return <div>Error: {error}</div>;
+    return <Error error={error} />;
   }
 
   return (

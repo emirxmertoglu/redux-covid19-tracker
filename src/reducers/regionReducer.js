@@ -46,7 +46,7 @@ const regionSlice = createSlice({
     });
     builder.addCase(fetchRegionData.rejected, (state, action) => {
       state.status = "failed";
-      state.error = action.payload;
+      state.error = action.error?.message;
     });
   },
 });
