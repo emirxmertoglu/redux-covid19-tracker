@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Cards from "@/components/Cards";
 import Countries from "@/components/Countries";
+import Chart from "@/components/Chart";
 
 function App() {
   return (
@@ -11,6 +12,9 @@ function App() {
       </div>
       <div className="mb-8">
         <Countries />
+      </div>
+      <div className="mb-8">
+        <Chart />
       </div>
     </div>
   );

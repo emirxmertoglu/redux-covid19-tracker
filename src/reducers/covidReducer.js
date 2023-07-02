@@ -7,7 +7,7 @@ export const fetchCovidData = createAsyncThunk(
     try {
       const { selectedCountry } = params;
       const response = await axios.get(
-        `${import.meta.env.VITE_COVID_TRACKER_API_URL}/reports/total`,
+        `${import.meta.env.VITE_COVID_TRACKER_API_URL}/reports/total?`,
         {
           params: {
             ...(selectedCountry && { iso: selectedCountry }),
